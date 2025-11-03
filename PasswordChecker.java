@@ -24,7 +24,7 @@ public class PasswordChecker {
  
     String regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()]).{8,}$";
 
-    if (password == null) return false;
+    if (password == null || password.isEmpty()) return false;
     return password.matches(regex);  
     }
 
