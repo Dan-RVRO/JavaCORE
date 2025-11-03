@@ -9,7 +9,7 @@ public class vocalCounter {
         int contador = 0;
 
         // Convertir el texto a arreglo de caracteres
-        char[] letras = texto.toCharArray();
+        char[] letras = texto.toLowerCase().toCharArray();
 
         // Recorrer cada letra
         for (char c : letras) {
@@ -17,12 +17,7 @@ public class vocalCounter {
                 c == 'e' || 
                 c == 'i' || 
                 c == 'o' || 
-                c == 'u' ||
-                c == 'A' || 
-                c == 'E' || 
-                c == 'I' || 
-                c == 'O' || 
-                c == 'U') {
+                c == 'u') {
                 contador++;
             }
         }
