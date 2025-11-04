@@ -1,7 +1,5 @@
 import java.util.stream.*;
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
    /*
@@ -19,12 +17,6 @@ public class StreamsTut {
         String[] inputArray = {"apple", "Banana", "kiwi", "pear", "grape", "Orange", "fig", "plum"};
         System.out.println(filterStrings(inputArray));
         
-        
-        
-
-
-
-
         /*
          * When class is no static we need to create instance of class to call method
          * or we can make method static to call directly
@@ -33,6 +25,7 @@ public class StreamsTut {
          * tut.gettingStarted();
          */
 
+        // Calling gettingStarted method to demonstrate streams
         gettingStarted();
           
     }
@@ -50,8 +43,11 @@ public class StreamsTut {
 
         // turn String[] array in to List<String> object
         List<String> inputList = Arrays.stream(inputArray)
+                                        // apply filter, sort and collect to list
                                        .filter(str -> str.length() > 3 && Character.isLowerCase(str.charAt(0)))
-                                       .sorted()          
+                                       // sort the stream alphabetically
+                                       .sorted()
+                                       // collect the result back to a INMUTABLE List        
                                        .toList();
         /* 
         for (String str : inputList) {
